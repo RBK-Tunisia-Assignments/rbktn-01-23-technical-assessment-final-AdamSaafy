@@ -6,7 +6,9 @@ connection.connect((err) => {
   if (err) {
     console.error(err);
   } else {
-    console.log("db conected !!");
+    console.log("db conected !!",mysqlConfig.database);
   }
 });
+
+
 module.exports = connection;
