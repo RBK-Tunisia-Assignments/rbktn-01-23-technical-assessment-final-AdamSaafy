@@ -94,9 +94,9 @@ PS: Take into consideration that the ingredient are a string with many ingredien
 > As a user, I want to be able to post a recepie to the server, so that I can share my recepie with other users.
 
 **Implement this user story by doing the following:**
-
+AJAX / 
  - [ ] In the client-side code, add a form for users to input the details of their recepie.
- - [ ] Add an AJAX / Or axios request to post the recepie details to the server when the user submits the form.
+ - [ ] Add an  axios request to post the recepie details to the server when the user submits the form.
  - [ ] In the Express server server/index.js, complete the request handler that will respond to POST requests to /api/recepies and store the recepie details in the database.
 
     **WHEN THIS STEP IS COMPLETE:**  please make a commit with the message "complete step three"

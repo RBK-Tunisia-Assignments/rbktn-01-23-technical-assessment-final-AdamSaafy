@@ -11,14 +11,15 @@ const getrecepie = (req, res) => {
   recepiesModel.getOne(function (error, results) {
     if (error) res.status(500).send(error);
     else res.json(results);
-  }, req.params.name);
+  }, req.params.recepie_name);
 };
 
 const addRecepie = (req , res) => {
-  recepiesModel.add(function (error, results) {
+ 
+
+  recepiesModel.add(Cook_Time,Prep_Time,recepie_Name,Serves,categorie,recepie_Image,recepie_Description,recepie_Ingredients,function (error, results) {
     if (error) res.status(500).send(error);
     else res.json(results);
-    req.body
     
     
 })
