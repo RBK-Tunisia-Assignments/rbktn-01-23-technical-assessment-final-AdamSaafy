@@ -1,10 +1,13 @@
 import React from "react";
 import "../index.scss";
-const AllRecepies = () => {
+const AllRecepies = ({Recepies , changeView }) => {
+  console.log(Recepies)
   return (
     <div className="card-container">
-    
-      <div className="card">
+    {Recepies.map((recepie)=>{
+      
+      return (<>
+      <div className="card" key={recepie.recepie_Name} >
         <button className="delete">delete</button>
         <button className="update">update </button>
 
@@ -12,18 +15,18 @@ const AllRecepies = () => {
           <div className="header">
             <img
               className="img"
-              src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-              alt="food"
+              src={recepie.recepie_Image}
+              alt={recepie.recepie_Name}
             />
           </div>
           <div className="text">
-            <h1 className="food">Pizza</h1>
-            <i> 25 Mins</i> <br />
-            <i> Serves: 5 </i>
+            <h1 className="food">{recepie.recepie_Name}</h1>
+            <i> {recepie.Cook_Time+recepie.Prep_Time}:Mins</i> <br />
+            <i>{ recepie.Serves }</i>
           </div>
         </>
       </div>
-      <div className="card">
+      {/* <div className="card">
         <button className="delete">delete</button>
         <button className="update">update </button>
 
@@ -118,8 +121,11 @@ const AllRecepies = () => {
             <i> 40 Mins</i> <br />
             <i>Serves : 2 </i>
           </div>
-        </>
-      </div>
+        </> 
+      </div>*/}
+      </>)
+    })}
+      
   
     </div>
   );
